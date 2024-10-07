@@ -15,6 +15,13 @@
 */
 
 .page {
+  display: grid;
+  justify-items: center;
+  color: var(--color-accent, #000000);
+  font-family: var(--font-main, sans-serif);
+  font-size: 18px;
+  background-color: var(--color-bg, #ffffff);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--font-normal, 400);
 }
