@@ -37,18 +37,21 @@
             linear-gradient(to bottom, var(--gradient-full-start), var(--gradient-full-end));
 }
 
-@media (prefers-color-scheme: light) {
-    --font-normal: 400;
-    --font-bold: 700;
-    --color-bg: #000000;
-    --color-accent: #00CC14;
-    --color-button-text: var(--color-accent);
-    --gradient-line-first: #dcdcdc;
-    --gradient-line-second: #d3d3d300;
-    --gradient-full-start: #e7e7e7;
-    --gradient-full-end: #1a1a1a;
-    --image-bg:
-            repeating-linear-gradient(to right, var(--gradient-line-first) 0 2px, var(--gradient-line-second) 2px 4px),
-            repeating-linear-gradient(to bottom, var(--gradient-line-first) 0 2px, var(--gradient-line-second) 2px 4px),
-            linear-gradient(to bottom, var(--gradient-full-start) 0.01%, var(--gradient-full-end));
+@media (prefers-color-scheme: dark) {
+    :root {
+        --font-normal: 465;
+        --font-bold: 785;
+        --color-bg: #000000;
+        --color-accent: #00CC14;
+        --color-button-text: var(--color-accent);
+        --gradient-line-first: #000000;
+        --gradient-line-second: #00000000;
+        --gradient-full-start: #017f0d;
+        --gradient-full-end: #004306;
+        --image-bg:
+                repeating-linear-gradient(to right, var(--gradient-line-first) 0 2px, var(--gradient-line-second) 2px 4px),
+                repeating-linear-gradient(to bottom, var(--gradient-line-first) 0 2px, var(--gradient-line-second) 2px 4px),
+                linear-gradient(to bottom, var(--gradient-full-start), var(--gradient-full-end));
+    }
 }
+

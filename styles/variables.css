@@ -20,4 +20,3 @@
         repeating-linear-gradient(to bottom, var(--gradient-line-first) 0 2px, var(--gradient-line-second) 2px 4px),
         linear-gradient(to bottom, var(--gradient-full-start) 0.01%, var(--gradient-full-end));
 }
-
