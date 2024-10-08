@@ -43,7 +43,7 @@
   justify-items: center;
   margin-block: 100px;
   border: 2px solid currentColor;
-  padding-top: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
+  padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-bottom: 24px;
   font-family: var(--font-accent, sans-serif);
   font-size: 14px;
@@ -54,7 +54,7 @@
 
 .header__logo {
   margin-block-end: 20px;
-  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-decoration: none;
 }
 
@@ -71,18 +71,16 @@
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
 
+/*navigation*/
+
 .theme-menu__list {
   display: grid;
   gap: 14px;
-  margin-inline-start: 18px;
+  margin-left: 18px;
 
   @media (width <= 375) {
       margin-left: 20px;
     }
-}
-
-.theme-menu__item {
-  line-height: 0;
 }
 
 .theme-menu__button {
@@ -121,7 +119,7 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  inset-inline-start: -20px;
+  left: -20px;
 }
 
 /*main*/
@@ -231,6 +229,11 @@
   }
 }
 
+.card__like-button {
+  min-width: 130px;
+  block-size: 38px;
+}
+
 /*hide sparks*/
 .sparks {
   opacity: 0;
@@ -257,7 +260,91 @@
   box-shadow: 2px 2px 0 var(--color-accent, #000000);
 }
 
-.card__like-button {
-  min-width: 130px;
-  block-size: 38px;
+.button__text {
+  z-index: 1;
+  color: var(--color-button-text, #ffffff);
+  font-family: var(--font-accent, sans-serif);
+  font-size: 14px;
+  line-height: 1;
+  mix-blend-mode: difference;
+}
+
+.content__save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1px;
+  width: 100%;
+  max-width: 339px;
+
+  @media (width <= 375px) {
+    flex-direction: column;
+    max-width: 310px;
+  }
+}
+
+.floppy-icon {
+  z-index: 1;
+  flex-shrink: 0;
+  color: var(--color-button-text, #ffffff);
+  mix-blend-mode: difference;
+}
+
+.content__floppy-icon {
+  height: 21px;
+
+  @media (width <= 375px) {
+    height: 28px;
+  }
+}
+
+.dialog[open] {
+  display: grid;
+  gap: 30px;
+  border: 2px solid var(--color-accent, #000000);
+  padding: 30px;
+  overflow: hidden;
+  background-color: var(--color-bg, #ffffff);
+  width: 100%;
+  max-width: 357px;
+
+  @media (width <= 375px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 341px;
+  }
+}
+
+.dialog::backdrop {
+  opacity: 75%;
+  background-color: var(--color-backdrop, #000000);
+}
+
+.dialog__message {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__floppy-icon {
+  height: 39px;
+  width: 39px;
+}
+
+.dialog__text {
+  color: var(--color-accent, #000000);
+  font-family: var(--font-accent, sans-serif);
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  display: grid;
+  place-items: center;
+  height: 38px;
+  width: 100%;
 }
