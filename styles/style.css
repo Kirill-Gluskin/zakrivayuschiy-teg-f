@@ -21,7 +21,111 @@
   font-family: var(--font-main, sans-serif);
   font-size: 18px;
   background-color: var(--color-bg, #ffffff);
+  background-image: var(--image-bg);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-normal, 400);
+}
+
+/*header*/
+.header {
+  display: grid;
+  justify-items: center;
+  margin-block: 100px;
+  border: 2px solid currentColor;
+  padding-top: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem); ///убрать////
+  padding-bottom: 24px;
+  font-family: var(--font-accent, sans-serif);
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: inherit;
+  inline-size: var(--page-size, min(100%, 700px));
+}
+
+.header__logo {
+  margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.header__logo:focus {
+  outline: none;
+}
+
+.header__logo:focus-visible {
+  outline: 2px solid currentColor;
+}
+
+.header__title {
+  margin-block-end: 26px;
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 14px;
+  margin-inline-start: 18px;
+
+  @media (width <= 375) {
+      margin-left: 20px;
+    }
+}
+
+.theme-menu__item {
+  line-height: 0;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  text-transform: inherit;
+  background: transparent;
+  transition: opacity var(--animation-time, 0.3s) ease;
+  cursor: pointer;
+  appearance: none;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--color-accent, #000000);
+  transition: transform var(--animation-time, 0.3s) ease;
+  transform: scaleX(0);
+  transform-origin: top left;
+  block-size: 2px;
+  inline-size: 100%;
+  inset-block-end: -3px;
+  inset-inline-start: 0;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:disabled {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  inset-inline-start: -20px;
 }
