@@ -43,7 +43,7 @@
   justify-items: center;
   margin-block: 100px;
   border: 2px solid currentColor;
-  padding-top: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem); ///убрать////
+  padding-top: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
   padding-bottom: 24px;
   font-family: var(--font-accent, sans-serif);
   font-size: 14px;
@@ -174,7 +174,7 @@
 .card__image {
   display: block;
   object-fit: cover;
-  object-position: 95% 50%;
+  object-position: center;
   width: 100%;
   aspect-ratio: 1/1;
 }
