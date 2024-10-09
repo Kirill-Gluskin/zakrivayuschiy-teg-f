@@ -313,7 +313,6 @@
   position: relative;
   border: 2px solid var(--color-accent, #000000);
   background-color: var(--color-bg, #ffffff);
-  transition: transform 0.3s ease;
   transition: box-shadow var(--animation-time, 0.3s) ease;
   cursor: pointer;
 }
