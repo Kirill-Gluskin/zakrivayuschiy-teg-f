@@ -235,8 +235,10 @@
   display: block;
   right: -2px;
   bottom: -3px;
+}
 
-  @media (min-width: 375px) {
+@media (width <= 375px) {
+  .like-icon {
     bottom: -2px;
   }
 }
@@ -247,7 +249,7 @@
 }
 
 /*hide sparks*/
-.sparks {
+.lights {
   opacity: 0;
 }
 
@@ -291,8 +293,10 @@
   padding-right: 1px;
   width: 100%;
   max-width: 339px;
+}
 
-  @media (min-width: 375px) {
+@media (width <= 375px) {
+  .content__save-button {
     flex-direction: column;
     max-width: 310px;
   }
@@ -307,8 +311,10 @@
 
 .content__floppy-icon {
   height: 21px;
+}
 
-  @media (min-width: 375px) {
+@media (width <= 375px) {
+  .content__floppy-icon {
     height: 28px;
   }
 }
@@ -322,8 +328,10 @@
   background-color: var(--color-bg, #ffffff);
   width: 100%;
   max-width: 357px;
+}
 
-  @media (min-width: 375px) {
+@media (width <= 375px) {
+  .dialog[open] {
     padding-left: 40px;
     padding-right: 40px;
     max-width: 341px;
@@ -359,4 +367,48 @@
   place-items: center;
   height: 38px;
   width: 100%;
+}
+
+/*filters for pics*/
+.card__image--filter1 {
+  filter: grayscale(100%);
+}
+
+.card__image--filter2 {
+  filter: sepia(100%);
+}
+
+.card__image--filter3 {
+  filter: blur(5px);
+}
+
+.card__image--filter4 {
+  filter: grayscale(0.7);
+}
+
+.card__image--filter5 {
+  filter: brightness(150%);
+}
+
+.card__image--filter6 {
+  filter: contrast(200%);
+}
+
+.card__image--filter7 {
+  filter: hue-rotate(90deg) saturate(150%);
+}
+
+.card__image--filter8 {
+  filter: grayscale(50%) brightness(120%) blur(3px);
+}
+
+
+.like-icon:hover .body {
+  fill: var(--color-accent, #000000);
+  transition: fill var(--animation-time, 0.3s) ease;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color-accent, #000000);
+  transition: fill var(--animation-time, 0.3s) 0.05s ease;
 }
