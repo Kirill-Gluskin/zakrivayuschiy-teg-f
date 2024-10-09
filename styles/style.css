@@ -298,6 +298,21 @@
   transition: fill var(--animation-time, 0.3s) 0.05s ease;
 }
 
+.like-icon.is-liked .body {
+  fill: var(--color-heart-fill, #ff0000);
+  transition: fill var(--animation-time, 0.3s) ease;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color-heart-fill, #ff0000);
+  transition: fill var(--animation-time, 0.3s) 0.05s ease;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-heart-fill, #ff0000);
+  transition: fill var(--animation-time, 0.3s) 0.06s ease;
+}
+
 .card__like-button {
   min-width: 130px;
   height: 38px;

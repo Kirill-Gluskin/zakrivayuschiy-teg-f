@@ -26,3 +26,34 @@
         left: -16px;
     }
 }
+
+.like-icon.is-liked .heart {
+    animation: heart var(--animation-time) ease-in 0.1s 2 alternate;
+}
+
+@keyframes heart {
+    from {
+        transform-origin: center;
+        scale: 1;
+    }
+
+    to {
+        transform-origin: center;
+        scale: 1.5;
+    }
+}
+
+.like-icon.is-liked .lights {
+    animation: sparks var(--animation-time) ease-in var(--animation-time) 2
+    alternate;
+}
+
+@keyframes sparks {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
