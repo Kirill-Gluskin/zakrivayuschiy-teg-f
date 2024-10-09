@@ -29,14 +29,6 @@
   font-variation-settings: "wght" var(--font-normal, 400);
 }
 
-.main {
-  display: grid;
-  justify-items: center;
-  gap: 50px;
-  padding-bottom: 100px;
-  width: var(--page-size, min(100%, 696px));
-}
-
 /*header*/
 .header {
   display: grid;
@@ -138,6 +130,13 @@
 }
 
 /*main*/
+.main {
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+  padding-bottom: 100px;
+  width: var(--page-size, min(100%, 696px));
+}
 
 /*card*/
 .main__cards {
@@ -230,6 +229,39 @@
   border: 2px solid currentColor;
 }
 
+/*filters for pics*/
+.card__image--filter1 {
+  filter: grayscale(100%);
+}
+
+.card__image--filter2 {
+  filter: sepia(100%);
+}
+
+.card__image--filter3 {
+  filter: blur(5px);
+}
+
+.card__image--filter4 {
+  filter: grayscale(0.7);
+}
+
+.card__image--filter5 {
+  filter: brightness(150%);
+}
+
+.card__image--filter6 {
+  filter: contrast(200%);
+}
+
+.card__image--filter7 {
+  filter: hue-rotate(90deg) saturate(150%);
+}
+
+.card__image--filter8 {
+  filter: grayscale(50%) brightness(120%) blur(3px);
+}
+
 .like-icon {
   position: absolute;
   display: block;
@@ -239,8 +271,31 @@
 
 @media (width <= 375px) {
   .like-icon {
+    position: absolute;
+    display: block;
+    right: -2px;
     bottom: -2px;
   }
+}
+
+.like-icon:hover .body {
+  fill: var(--color-accent, #000000);
+  transition: fill var(--animation-time, 0.3s) ease;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color-accent, #000000);
+  transition: fill var(--animation-time, 0.3s) 0.05s ease;
+}
+
+.like-icon:active .body {
+  fill: var(--color-heart-fill, #ff0000);
+  transition: fill var(--animation-time, 0.3s) ease;
+}
+
+.like-icon:active .main-body {
+  fill: var(--color-heart-fill, #ff0000);
+  transition: fill var(--animation-time, 0.3s) 0.05s ease;
 }
 
 .card__like-button {
@@ -253,13 +308,25 @@
   opacity: 0;
 }
 
-/*button*/
+/*button common*/
 .button {
   position: relative;
   border: 2px solid var(--color-accent, #000000);
   background-color: var(--color-bg, #ffffff);
+  transition: transform 0.3s ease;
   transition: box-shadow var(--animation-time, 0.3s) ease;
   cursor: pointer;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--color-accent, #000000);
+  transition: transform var(--animation-duration, 0.5s) ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inset: 0;
 }
 
 .button:hover::after {
@@ -275,6 +342,7 @@
 }
 
 .button__text {
+  position: relative;
   z-index: 1;
   color: var(--color-button-text, #ffffff);
   font-family: var(--font-accent, sans-serif);
@@ -367,48 +435,4 @@
   place-items: center;
   height: 38px;
   width: 100%;
-}
-
-/*filters for pics*/
-.card__image--filter1 {
-  filter: grayscale(100%);
-}
-
-.card__image--filter2 {
-  filter: sepia(100%);
-}
-
-.card__image--filter3 {
-  filter: blur(5px);
-}
-
-.card__image--filter4 {
-  filter: grayscale(0.7);
-}
-
-.card__image--filter5 {
-  filter: brightness(150%);
-}
-
-.card__image--filter6 {
-  filter: contrast(200%);
-}
-
-.card__image--filter7 {
-  filter: hue-rotate(90deg) saturate(150%);
-}
-
-.card__image--filter8 {
-  filter: grayscale(50%) brightness(120%) blur(3px);
-}
-
-
-.like-icon:hover .body {
-  fill: var(--color-accent, #000000);
-  transition: fill var(--animation-time, 0.3s) ease;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--color-accent, #000000);
-  transition: fill var(--animation-time, 0.3s) 0.05s ease;
 }
