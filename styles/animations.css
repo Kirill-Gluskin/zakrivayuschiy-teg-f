@@ -43,7 +43,7 @@
     }
 }
 
-.like-icon.is-liked .lights {
+.like-icon.is-liked .sparks {
     animation: sparks var(--animation-time) ease-in var(--animation-time) 2
     alternate;
 }
