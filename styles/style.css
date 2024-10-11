@@ -280,6 +280,11 @@
   }
 }
 
+.like-icon .contour {
+  fill: var(--color-accent, #000000);
+  transition: fill 0.1s linear;
+}
+
 .like-icon:hover .core {
   fill: var(--color-accent, #000000);
   transition: fill var(--animation-time, 0.3s) linear;
