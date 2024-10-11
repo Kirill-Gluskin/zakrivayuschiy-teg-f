@@ -84,6 +84,7 @@
   transition: opacity var(--animation-time, 0.3s) ease;
   cursor: pointer;
   appearance: none;
+  padding: 0;
 }
 
 .theme-menu__button::after {
@@ -205,23 +206,25 @@
   gap: 27px;
 }
 
+.card__text {
+  line-height: 21px;
+}
+
 .card__button-wrapper {
   display: flex;
   justify-content: end;
-  gap: 12px;
+  gap: 6px;
 }
 
 .card__icon-button {
   display: grid;
   border: 2px solid transparent;
+  place-items: center;
   background: transparent;
   transition: border var(--animation-time, 0.3s) ease;
   cursor: pointer;
-  width: 38px;
-  height: 38px;
   appearance: none;
   padding: 0;
-  margin: 0;
 }
 
 .card__icon-button:focus {
