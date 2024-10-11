@@ -32,7 +32,7 @@
 /*animation heart*/
 
 .like-icon.is-liked .heart {
-    animation: heart var(--animation-time) ease-in 0.1s 2 alternate;
+    animation: heart var(--animation-time) ease-in 0.1s 1 alternate;
 }
 
 @keyframes heart {
@@ -48,7 +48,7 @@
 }
 
 .like-icon.is-liked .sparks {
-    animation: sparks var(--animation-time) ease-in var(--animation-time) 2
+    animation: sparks var(--animation-time) ease-in var(--animation-time) 1
     alternate;
 }
 

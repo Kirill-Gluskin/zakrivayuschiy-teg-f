@@ -68,7 +68,7 @@
 
 .theme-menu__list {
   display: grid;
-  gap: 14px;
+  gap: 0.875em;
   margin-left: 18px;
 
   @media (width <= 375) {
@@ -233,35 +233,35 @@
 
 /*filters for pics*/
 
-.card__image--filter1 {
+.card__image--grayscale-full {
   filter: grayscale(100%);
 }
 
-.card__image--filter2 {
+.card__image--sepia {
   filter: sepia(100%);
 }
 
-.card__image--filter3 {
+.card__image--blur {
   filter: blur(5px);
 }
 
-.card__image--filter4 {
+.card__image--grayscale{
   filter: grayscale(0.7);
 }
 
-.card__image--filter5 {
+.card__image--brightness {
   filter: brightness(150%);
 }
 
-.card__image--filter6 {
+.card__image--contrast {
   filter: contrast(200%);
 }
 
-.card__image--filter7 {
+.card__image--mixed {
   filter: hue-rotate(90deg) saturate(150%);
 }
 
-.card__image--filter8 {
+.card__image--mixed-strong {
   filter: grayscale(50%) brightness(120%) blur(3px);
 }
 
@@ -274,46 +274,43 @@
 
 @media (width <= 375px) {
   .like-icon {
-    display: block;
-    position: absolute;
-    right: -2px;
     bottom: -2px;
   }
 }
 
 .like-icon:hover .core {
   fill: var(--color-accent, #000000);
-  transition: fill var(--animation-time, 0.3s) ease;
+  transition: fill var(--animation-time, 0.3s) linear;
 }
 
 .like-icon:hover .main-body {
   fill: var(--color-accent, #000000);
-  transition: fill var(--animation-time, 0.3s) 0.05s ease;
+  transition: fill var(--animation-time, 0.3s) 0.05s linear;
 }
 
 .like-icon:active .core {
   fill: var(--color-heart-fill, #ff0000);
-  transition: fill var(--animation-time, 0.3s) ease;
+  transition: fill var(--animation-time, 0.3s) linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--color-heart-fill, #ff0000);
-  transition: fill var(--animation-time, 0.3s) 0.05s ease;
+  transition: fill var(--animation-time, 0.3s) 0.05s linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--color-heart-fill, #ff0000);
-  transition: fill var(--animation-time, 0.3s) ease;
+  transition: fill var(--animation-time, 0.3s) linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--color-heart-fill, #ff0000);
-  transition: fill var(--animation-time, 0.3s) 0.05s ease;
+  transition: fill var(--animation-time, 0.3s) 0.05s linear;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--color-heart-fill, #ff0000);
-  transition: fill var(--animation-time, 0.3s) 0.06s ease;
+  transition: fill var(--animation-time, 0.3s) 0.06s linear;
 }
 
 .card__like-button {
@@ -410,7 +407,6 @@
   gap: 30px;
   border: 2px solid var(--color-accent, #000000);
   padding: 30px;
-  overflow: hidden;
   background-color: var(--color-bg, #ffffff);
   width: 100%;
   max-width: 357px;
