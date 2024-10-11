@@ -208,11 +208,10 @@
 .card__button-wrapper {
   display: flex;
   justify-content: end;
-  gap: 6px;
+  gap: 12px;
 }
 
 .card__icon-button {
-  position: relative;
   display: grid;
   border: 2px solid transparent;
   background: transparent;
@@ -221,6 +220,8 @@
   width: 38px;
   height: 38px;
   appearance: none;
+  padding: 0;
+  margin: 0;
 }
 
 .card__icon-button:focus {
@@ -245,7 +246,7 @@
   filter: blur(5px);
 }
 
-.card__image--grayscale{
+.card__image--grayscale {
   filter: grayscale(0.7);
 }
 
@@ -266,10 +267,8 @@
 }
 
 .like-icon {
-  display: block;
-  position: absolute;
-  right: -2px;
-  bottom: -3px;
+  width: 39px;
+  height: 36px;
 }
 
 @media (width <= 375px) {
