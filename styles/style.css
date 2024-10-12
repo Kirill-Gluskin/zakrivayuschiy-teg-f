@@ -280,9 +280,21 @@
   }
 }
 
+/*default state */
+
 .like-icon .contour {
   fill: var(--color-accent, #000000);
   transition: fill 0.1s linear;
+}
+
+.like-icon .main-body {
+  fill: var(--color-bg, #ffffff);
+  transition: fill var(--animation-time, 0.3s) linear;
+}
+
+.like-icon .core {
+  fill: var(--color-bg, #ffffff);
+  transition: fill var(--animation-time, 0.3s) 0.03s linear;
 }
 
 .like-icon:hover .core {
